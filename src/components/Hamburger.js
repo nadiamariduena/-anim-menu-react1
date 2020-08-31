@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Hamburger = () => {
   return (
+    //  hamburger menu---------------------------------------------------------
     <div className="hamburger-menu">
       <div className="menu-secondary-background-color">
         {/* what this div represents is:  
@@ -25,7 +26,7 @@ const Hamburger = () => {
             <nav>
               <ul>
                 <li>
-                  <Link to="/opportunities">Opportunnities</Link>
+                  <Link to="/opportunities">Opportunities</Link>
                 </li>
                 <li>
                   <Link to="/solutions">Solutions</Link>
@@ -59,6 +60,7 @@ const Hamburger = () => {
         </div>
       </div>
     </div>
+    // end hamburger menu---------------------------------------------------------
   );
 };
 
