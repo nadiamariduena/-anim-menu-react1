@@ -20,24 +20,35 @@ const Hamburger = ({ state }) => {
     // If the menu is open and we click the menu button to close it.
     if (state.clicked === false) {
       // If menu is closed and we want to open it.
-      //close the menu
-      // menu.style.display = "none";  YOU SHOULD HIDE THIS BEFORE ADDING THE GSAP anim. otherwise i will make you crazy :)
+      //
+      //
+      ///////////  ******  close the menu  *****/////////
+      // menu.style.display = "none";  YOU SHOULDNT HIDE THIS BEFORE ADDING THE GSAP anim. otherwise it will make you crazy :)
       //                              * GSAP
       gsap.to([revealMenu, revealMenuBackground], {
         duration: 0.8,
         height: 0,
         ease: "power3.inOut",
         stagger: {
+          // A staggered animation consists of sequential or overlapping animations.
+          // 
           amount: 0.07,
         },
       });
+      //
+      gsap.to(menu, {
+        duration: 1,
+        css: { display: "none" },
+      });
+      ///////////  ******  close the menu  *****/////////
+      //
     } else if (
       state.clicked === true ||
       (state.clicked === true && state.initial === null)
     ) {
       menu.style.display = "block";
       // open the menu
-      // menu.style.display = "block";  YOU SHOULD HIDE THIS BEFORE ADDING THE GSAP anim. otherwise i will make you crazy :)
+      // menu.style.display = "block";  YOU SHOULDNT HIDE THIS BEFORE ADDING THE GSAP anim. otherwise it will make you crazy :)
       // menu.style.display = "flex"; if you add flex, its going to show weirdly
     }
   });
