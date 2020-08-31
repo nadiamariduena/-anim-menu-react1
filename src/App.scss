@@ -55,14 +55,14 @@ header {
       font-weight: 700;
       font-size: 1rem;
       text-decoration: none;
-      color: #eee;
+      color: rgb(15, 15, 15);
     }
     .menu {
       button {
         border: none;
         background: none;
         outline: none;
-        color: #eee;
+        color: rgb(15, 15, 15);
         cursor: pointer;
         font-size: 0.8rem;
         mix-blend-mode: difference;
@@ -70,7 +70,7 @@ header {
     }
   }
   .hamburger-menu {
-    // display: none;
+    display: none; //---------- this is what is going to be seen when deploying the navbar
     z-index: 9;
     top: 0;
     left: 0;
@@ -112,6 +112,9 @@ header {
       // -----------
       .wrapper {
         position: relative;
+        //
+        // ----------------------------------- OPPORTUNITIES - SOLUTIONS -CONTACTS
+        //
         .menu-links {
           display: flex;
           justify-content: space-around;
@@ -143,6 +146,9 @@ header {
               }
             }
           }
+          //
+          // ----------------------------------- the block text - lorem ipsum
+          //
           .info {
             color: #fff;
             width: 300px;
@@ -156,6 +162,7 @@ header {
             }
           }
         }
+        //  ------------------
         .locations {
           position: absolute;
           bottom: -80px;
