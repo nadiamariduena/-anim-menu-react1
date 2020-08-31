@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-const Hamburger = () => {
+const Hamburger = ({ state }) => {
+  let menu = useRef(null);
+
+  // ----------------------
+
+  useEffect(() => {
+    if (state.clicked === false) {
+      //close the menu
+      menu.style.display = "none";
+    } else if (
+      state.clicked === true ||
+      (state.clicked === true && state.initial === null)
+    ) {
+      // open the menu
+      menu.style.display = "block";
+      // menu.style.display = "flex"; if you add flex, its going to show weirdly
+    }
+  });
+
   return (
     //  hamburger menu---------------------------------------------------------
-    <div className="hamburger-menu">
+    // ref={el => (menu = el)}  , el  stands for element
+    <div ref={(el) => (menu = el)} className="hamburger-menu">
       <div className="menu-secondary-background-color">
         {/* what this div represents is:  
         

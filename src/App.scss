@@ -91,7 +91,7 @@ header {
     }
     .menu-layer {
       position: relative;
-      background: #111;
+      background: lemonchiffon;
       height: 100%;
       overflow: hidden;
       .menu-city-background {
@@ -137,10 +137,10 @@ header {
                 width: 700px;
                 a {
                   position: absolute;
-                  color: #fff;
+                  color: rgb(12, 12, 12);
                   text-decoration: none;
                   &:hover {
-                    color: #333;
+                    color: rgb(29, 29, 29);
                   }
                 }
               }
@@ -150,7 +150,7 @@ header {
           // ----------------------------------- the block text - lorem ipsum
           //
           .info {
-            color: #fff;
+            color: rgb(12, 12, 12);
             width: 300px;
             h3 {
               font-size: 1.2rem;
@@ -166,7 +166,7 @@ header {
         .locations {
           position: absolute;
           bottom: -80px;
-          color: #fff;
+          color: rgb(12, 12, 12);
           margin-top: 16px;
           font-size: 0.8rem;
           font-weight: 600;
