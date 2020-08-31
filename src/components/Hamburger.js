@@ -1,21 +1,43 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
 
 const Hamburger = ({ state }) => {
+  //
+  // variables for our animated DOM nodes
   let menu = useRef(null);
+  let revealMenu = useRef(null);
+  let revealMenuBackground = useRef(null);
+  let cityBackground = useRef(null);
+  let line1 = useRef(null);
+  let line2 = useRef(null);
+  let line3 = useRef(null);
+  let info = useRef(null);
 
   // ----------------------
 
   useEffect(() => {
+    // If the menu is open and we click the menu button to close it.
     if (state.clicked === false) {
+      // If menu is closed and we want to open it.
       //close the menu
-      menu.style.display = "none";
+      // menu.style.display = "none";  YOU SHOULD HIDE THIS BEFORE ADDING THE GSAP anim. otherwise i will make you crazy :)
+      //                              * GSAP
+      gsap.to([revealMenu, revealMenuBackground], {
+        duration: 0.8,
+        height: 0,
+        ease: "power3.inOut",
+        stagger: {
+          amount: 0.07,
+        },
+      });
     } else if (
       state.clicked === true ||
       (state.clicked === true && state.initial === null)
     ) {
-      // open the menu
       menu.style.display = "block";
+      // open the menu
+      // menu.style.display = "block";  YOU SHOULD HIDE THIS BEFORE ADDING THE GSAP anim. otherwise i will make you crazy :)
       // menu.style.display = "flex"; if you add flex, its going to show weirdly
     }
   });
@@ -24,7 +46,10 @@ const Hamburger = ({ state }) => {
     //  hamburger menu---------------------------------------------------------
     // ref={el => (menu = el)}  , el  stands for element
     <div ref={(el) => (menu = el)} className="hamburger-menu">
-      <div className="menu-secondary-background-color">
+      <div
+        ref={(el) => (revealMenuBackground = el)}
+        className="menu-secondary-background-color"
+      >
         {/* what this div represents is:  
         
         if you look at the animation, when you click on the hamburger
@@ -36,7 +61,7 @@ const Hamburger = ({ state }) => {
         */}
       </div>
 
-      <div className="menu-layer">
+      <div ref={(el) => (revealMenu = el)} className="menu-layer">
         <div className="menu-city-background"></div>
 
         <div className="wrapper">
@@ -45,18 +70,24 @@ const Hamburger = ({ state }) => {
             <nav>
               <ul>
                 <li>
-                  <Link to="/opportunities">Opportunities</Link>
+                  <Link ref={(el) => (line1 = el)} to="/opportunities">
+                    Opportunities
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/solutions">Solutions</Link>
+                  <Link ref={(el) => (line2 = el)} to="/solutions">
+                    Solutions
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/contact-us">Contact us</Link>
+                  <Link ref={(el) => (line3 = el)} to="/contact-us">
+                    Contact us
+                  </Link>
                 </li>
               </ul>
             </nav>
             {/* -------nav -------- */}
-            <div className="info">
+            <div ref={(el) => (info = el)} className="info">
               <h3>Our Promise.</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
