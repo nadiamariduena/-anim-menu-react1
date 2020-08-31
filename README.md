@@ -6,7 +6,7 @@
 
 <br>
 
-![preview](./src/images-readme/anima-dropdown1.jpg)
+![preview](./src/images-readme/anima-dropdown2.jpg)
 
 <br>
 
