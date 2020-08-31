@@ -7,9 +7,9 @@
 <br>
 <br>
 
-<p>When you look at the first image, the console.log(1) , represents the state of the page on initial,
-then when you click(check img 2) , it becomes 2 which represents the opened state, then you click again
-and it becomes 3 (because you are now in state 3) which is console.log(3) </p>
+<p>When you look at the first image, the console.log(1) represents the state of the page on initial,
+then when you click(check img 2) , it becomes 2 which represents the opened state on console.log(2), then you click again
+and it becomes console.log(3) because you are now in state 3 </p>
 
 <br>
 <br>
