@@ -2,6 +2,34 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
+// After you are doing with the first phase of animations for the dropdown and text,
+// start with the cities buttons hover by importing the images
+
+import dallas from "../images/dallas.webp";
+import austin from "../images/austin.webp";
+import newyork from "../images/newyork.webp";
+import sanfrancisco from "../images/sanfrancisco.webp";
+import beijing from "../images/beijing.webp";
+
+const cities = [
+  { name: "Dallas", image: dallas },
+  { name: "Austin", image: austin },
+  { name: "New York", image: newyork },
+  { name: "San Francisco", image: sanfrancisco },
+  { name: "Beijing", image: beijing },
+];
+
+/*
+
+
+
+                                      AFTER YOU ASSIGN the Value to all the cities, go down in
+                                      the return part where the cities are and replace them like so:
+
+
+*/
+
+// ----------------------------
 const Hamburger = ({ state }) => {
   //
   // variables for our animated DOM nodes, they will go in each div starting from line: ....
@@ -190,6 +218,41 @@ const Hamburger = ({ state }) => {
     });
   };
 
+  /*
+
+
+                                    **   FUNCTIONS related to the Cities   **
+*/
+
+  // this function is going to handle the city whenever we hover On
+  const handleCity = (city) => {
+    gsap.to(cityBackground, {
+      duration: 0,
+      background: `url(${city})  center center`,
+    });
+    //
+    gsap.to(cityBackground, {
+      duration: 0.4,
+      opacity: 1,
+      ease: "power3.inOut",
+    });
+    //
+    gsap.from(cityBackground, {
+      duration: 0.4,
+      skewY: 2,
+      transformOrigin: "right top",
+    });
+  };
+  /* this will handle the cities in MOUSE out, so when you will remove the hover on the correspondent city. the
+    image will vanish because the opacity will RETURN to 0   */
+
+  const handleCityReturn = () => {
+    gsap.from(cityBackground, {
+      duration: 0.4,
+      opacity: 1,
+    });
+  };
+
   // ----------------------
   // ----------------------
 
@@ -211,7 +274,10 @@ const Hamburger = ({ state }) => {
       </div>
 
       <div ref={(el) => (revealMenu = el)} className="menu-layer">
-        <div className="menu-city-background"></div>
+        <div
+          ref={(el) => (cityBackground = el)}
+          className="menu-city-background"
+        ></div>
 
         <div className="wrapper">
           {/* -------nav -------- */}
@@ -246,14 +312,16 @@ const Hamburger = ({ state }) => {
             </div>
             {/* --- */}
             <div className="locations">
-              Location
-              <span>Paris</span>
-              <span>London</span>
-              <span>Berlin</span>
-              <span>New York</span>
-              <span>Amsterdam</span>
-              <span>Perth</span>
-              <span>Auckland</span>
+              Locations:
+              {cities.map((el) => (
+                <span
+                  key={el.name}
+                  onMouseEnter={() => handleCity(el.image)}
+                  onMouseOut={handleCityReturn}
+                >
+                  {el.name}
+                </span>
+              ))}
             </div>
           </div>
         </div>
