@@ -3,6 +3,7 @@ import { withRouter, Link } from "react-router-dom";
 // withRouter will give access to the history PROP
 // with the history we will be able to determine if the URL has been changed, so
 // if it s change we will execute a certain command
+// more : https://stackoverflow.com/questions/53539314/what-is-withrouter-for-in-react-router-dom
 import Hamburger from "./Hamburger";
 
 const Header = ({ history }) => {

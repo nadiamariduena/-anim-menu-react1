@@ -19,37 +19,97 @@ const Hamburger = ({ state }) => {
   useEffect(() => {
     // If the menu is open and we click the menu button to close it.
     if (state.clicked === false) {
-      // If menu is closed and we want to open it.
-      //
-      //
-      ///////////  ******  close the menu  *****/////////
-      // menu.style.display = "none";  YOU SHOULDNT HIDE THIS BEFORE ADDING THE GSAP anim. otherwise it will make you crazy :)
-      //                              * GSAP
+      // If the menu is closed and we want to open it.
+
+      /*
+      
+                                                ---------------------------
+                                                CLOSING THE MENU settings
+                                                ---------------------------
+      
+
+
+
+                                                 menu.style.display = "none";     **** 
+                                      
+                                             YOU SHOULDNT HIDE THIS BEFORE ADDING THE GSAP anim. 
+                                              otherwise it will make you crazy :)
+      */
+
+      //                                                *** G S A P * animations
       gsap.to([revealMenu, revealMenuBackground], {
         duration: 0.8,
         height: 0,
         ease: "power3.inOut",
         stagger: {
           // A staggered animation consists of sequential or overlapping animations.
-          // 
+          //
           amount: 0.07,
         },
       });
-      //
+      // copy and paste the data below (from line 51 bis 54) take this info and past it in line 69
       gsap.to(menu, {
         duration: 1,
-        css: { display: "none" },
+        css: { display: "none" }, //display: none; is to say you want it hidden
       });
-      ///////////  ******  close the menu  *****/////////
-      //
+
+      /*
+
+
+
+                                        ****** End Closing the menu  *****
+
+
+
+    */
     } else if (
       state.clicked === true ||
       (state.clicked === true && state.initial === null)
     ) {
-      menu.style.display = "block";
+      gsap.to(menu, {
+        duration: 0,
+        css: { display: "block" },
+      });
+      gsap.to([revealMenu, revealMenuBackground], {
+        durantion: 0,
+        opacity: 1,
+        height: "100%",
+      });
+      /*
+                                        AFTER COPY AND PASTE this:
+                                            gsap.to(menu, {
+                                            duration: 0,
+                                            css: { display: "block" },
+                                          });
+
+                                          and changing the duration and the display: "block",
+                                          you have to check it one the browser: it will opens when you click
+                                          and also animate the layers of the dropdown when closing it, BUT when
+                                          you try to open it again it will not work, and that is because you 
+                                          haven't defined YEt the height, as if you look the height definition in 
+                                          line 42, it s set to 0 , while here it isn't defined.
+
+                                    **    So to remediate that you will have to add the following:
+
+                                               gsap.to([revealMenu, revealMenuBackground], {
+                                                            durantion: 0,
+                                                            opacity: 1,
+                                                            height: "100%",
+                                                          });
+
+
+                                          ONCE its done, go to the browser: open the Menu then Close it
+                                          again, WAIT a second like its specified then open the MENU again
+                                          now it should work.
+
+
+
       // open the menu
       // menu.style.display = "block";  YOU SHOULDNT HIDE THIS BEFORE ADDING THE GSAP anim. otherwise it will make you crazy :)
       // menu.style.display = "flex"; if you add flex, its going to show weirdly
+
+
+*/
     }
   });
 
