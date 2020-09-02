@@ -1,6 +1,10 @@
 ## ANIMATED Menu in react using react-router-dom and GSAP.
 
-### App (in Progress)
+<p></p>
+
+[<img src="./src/images/preview.gif">](https://www.youtube.com/watch?v=MUZgd1EAWZU)
+
+<p>tutorial by Wrong Akram </p>
 
 ![preview](./src/images-readme/anima-dropdown1.jpg)
 
@@ -19,8 +23,6 @@ and it becomes console.log(3) because you are now in state 3 </p>
 <br>
 
 <hr>
-
-<!-- [<img src="./src/images-readme/anima-dropdown1.jpg">](https://youtu.be/7M7biQPpOs0) -->
 
 <br>
 <br>
