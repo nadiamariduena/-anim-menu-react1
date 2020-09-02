@@ -55,14 +55,14 @@ header {
       font-weight: 700;
       font-size: 1rem;
       text-decoration: none;
-      color: rgb(15, 15, 15);
+      color: rgb(0, 0, 0);
     }
     .menu {
       button {
         border: none;
         background: none;
         outline: none;
-        color: rgb(15, 15, 15);
+        color: rgb(0, 0, 0);
         cursor: pointer;
         font-size: 0.8rem;
         mix-blend-mode: difference;
@@ -79,7 +79,7 @@ header {
     height: 100%;
     width: 100%;
     .menu-secondary-background-color {
-      background: seagreen;
+      background: lemonchiffon;
       top: 0;
       left: 0;
       right: 0;
@@ -90,8 +90,9 @@ header {
       z-index: -1;
     }
     .menu-layer {
+      // opening menu yellow
       position: relative;
-      background: lemonchiffon;
+      background: rgb(168, 174, 204);
       height: 100%;
       overflow: hidden;
       .menu-city-background {
@@ -137,10 +138,10 @@ header {
                 width: 700px;
                 a {
                   position: absolute;
-                  color: rgb(12, 12, 12);
+                  color: rgb(255, 255, 255);
                   text-decoration: none;
                   &:hover {
-                    color: rgb(29, 29, 29);
+                    color: rgb(230, 230, 230);
                   }
                 }
               }
@@ -150,7 +151,7 @@ header {
           // ----------------------------------- the block text - lorem ipsum
           //
           .info {
-            color: rgb(12, 12, 12);
+            color: rgb(255, 255, 255);
             width: 300px;
             h3 {
               font-size: 1.2rem;
@@ -166,7 +167,7 @@ header {
         .locations {
           position: absolute;
           bottom: -80px;
-          color: rgb(12, 12, 12);
+          color: rgb(255, 255, 255);
           margin-top: 16px;
           font-size: 0.8rem;
           font-weight: 600;
@@ -211,5 +212,5 @@ header {
   }
 }
 
-// Careful with the images, DUE TO THE ANIMATION here, if the image isnt big enough 
-// its going to repeat even if its specified not to
+// Careful with the images, DUE TO THE ANIMATION here, if the image isnt big enough
+// sits going to repeat even if its specified not to

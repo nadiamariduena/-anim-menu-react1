@@ -252,6 +252,26 @@ const Hamburger = ({ state }) => {
       opacity: 1,
     });
   };
+  // ----
+  // hover                              OPPORTUNITIES - SOLUTIONS -CONTACTS
+  // ----
+  const handleHover = (e) => {
+    gsap.to(e.target, {
+      duration: 0.3,
+      y: 3,
+      skewY: 2,
+      ease: "power3.inOut",
+    });
+  };
+
+  const handleHoverExit = (e) => {
+    gsap.to(e.target, {
+      duration: 0.3,
+      y: -3,
+      skewY: 0,
+      ease: "power3.inOut",
+    });
+  };
 
   // ----------------------
   // ----------------------
@@ -285,17 +305,32 @@ const Hamburger = ({ state }) => {
             <nav>
               <ul>
                 <li>
-                  <Link ref={(el) => (line1 = el)} to="/opportunities">
+                  <Link
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
+                    ref={(el) => (line1 = el)}
+                    to="/opportunities"
+                  >
                     Opportunities
                   </Link>
                 </li>
                 <li>
-                  <Link ref={(el) => (line2 = el)} to="/solutions">
+                  <Link
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
+                    ref={(el) => (line2 = el)}
+                    to="/solutions"
+                  >
                     Solutions
                   </Link>
                 </li>
                 <li>
-                  <Link ref={(el) => (line3 = el)} to="/contact-us">
+                  <Link
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
+                    ref={(el) => (line3 = el)}
+                    to="/contact-us"
+                  >
                     Contact us
                   </Link>
                 </li>
