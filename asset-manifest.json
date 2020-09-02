@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/-anim-menu-react1/static/css/main.ac2c4bd9.chunk.css",
-    "main.js": "/-anim-menu-react1/static/js/main.40fda350.chunk.js",
-    "main.js.map": "/-anim-menu-react1/static/js/main.40fda350.chunk.js.map",
+    "main.css": "/-anim-menu-react1/static/css/main.2c45a9fd.chunk.css",
+    "main.js": "/-anim-menu-react1/static/js/main.43026e58.chunk.js",
+    "main.js.map": "/-anim-menu-react1/static/js/main.43026e58.chunk.js.map",
     "runtime-main.js": "/-anim-menu-react1/static/js/runtime-main.8d3fd2d4.js",
     "runtime-main.js.map": "/-anim-menu-react1/static/js/runtime-main.8d3fd2d4.js.map",
-    "static/js/2.b1efb8f9.chunk.js": "/-anim-menu-react1/static/js/2.b1efb8f9.chunk.js",
-    "static/js/2.b1efb8f9.chunk.js.map": "/-anim-menu-react1/static/js/2.b1efb8f9.chunk.js.map",
+    "static/js/2.ffec073d.chunk.js": "/-anim-menu-react1/static/js/2.ffec073d.chunk.js",
+    "static/js/2.ffec073d.chunk.js.map": "/-anim-menu-react1/static/js/2.ffec073d.chunk.js.map",
     "index.html": "/-anim-menu-react1/index.html",
-    "precache-manifest.168e9950fc79d0b7f2c88cbc5211b8e9.js": "/-anim-menu-react1/precache-manifest.168e9950fc79d0b7f2c88cbc5211b8e9.js",
+    "precache-manifest.ff420649b2a315c15af546607d81a273.js": "/-anim-menu-react1/precache-manifest.ff420649b2a315c15af546607d81a273.js",
     "service-worker.js": "/-anim-menu-react1/service-worker.js",
-    "static/css/main.ac2c4bd9.chunk.css.map": "/-anim-menu-react1/static/css/main.ac2c4bd9.chunk.css.map",
-    "static/js/2.b1efb8f9.chunk.js.LICENSE.txt": "/-anim-menu-react1/static/js/2.b1efb8f9.chunk.js.LICENSE.txt",
+    "static/css/main.2c45a9fd.chunk.css.map": "/-anim-menu-react1/static/css/main.2c45a9fd.chunk.css.map",
+    "static/js/2.ffec073d.chunk.js.LICENSE.txt": "/-anim-menu-react1/static/js/2.ffec073d.chunk.js.LICENSE.txt",
     "static/media/austin.webp": "/-anim-menu-react1/static/media/austin.a7aadf33.webp",
     "static/media/beijing.webp": "/-anim-menu-react1/static/media/beijing.209dcd10.webp",
     "static/media/dallas.webp": "/-anim-menu-react1/static/media/dallas.2bc38187.webp",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8d3fd2d4.js",
-    "static/js/2.b1efb8f9.chunk.js",
-    "static/css/main.ac2c4bd9.chunk.css",
-    "static/js/main.40fda350.chunk.js"
+    "static/js/2.ffec073d.chunk.js",
+    "static/css/main.2c45a9fd.chunk.css",
+    "static/js/main.43026e58.chunk.js"
   ]
 }
