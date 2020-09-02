@@ -1,10 +1,20 @@
 ## ANIMATED Menu in react using react-router-dom and GSAP.
 
-<p></p>
+### the website works perfectly but git pages doesnt seems to work very well with GSAP animations
 
 [<img src="./src/images/preview.gif">](https://www.youtube.com/watch?v=MUZgd1EAWZU)
 
 <p>tutorial by Wrong Akram </p>
+
+<br>
+<br>
+
+<hr>
+
+<br>
+<br>
+
+### App (process)
 
 ![preview](./src/images-readme/anima-dropdown1.jpg)
 
@@ -19,10 +29,3 @@ and it becomes console.log(3) because you are now in state 3 </p>
 <br>
 
 ![preview](./src/images-readme/anima-dropdown2.jpg)
-
-<br>
-
-<hr>
-
-<br>
-<br>
