@@ -76,6 +76,8 @@ const Hamburger = ({ state }) => {
         height: "100%",
       });
       staggerReveal(revealMenuBackground, revealMenu);
+      fadeInUp(info); //this anim concerns the <p> text , and it will fade in and out from the Y axe, check line 161
+      staggerText(line1, line2, line3);
     }
   }, [state]);
   // ----------------------
@@ -86,7 +88,7 @@ const Hamburger = ({ state }) => {
 
 
 
-  
+
                                         AFTER COPY AND PASTE this:
                                             gsap.to(menu, {
                                             duration: 0,
@@ -100,10 +102,10 @@ const Hamburger = ({ state }) => {
                                           haven't defined YEt the height, as if you look the height definition in 
                                           line 42, it s set to 0 , while here it isn't defined.
 
-                                    **    So to remediate that you will have to add the following:
+                                    **    So to remediate that you will have to add the following(line 73):
 
                                                gsap.to([revealMenu, revealMenuBackground], {
-                                                            durantion: 0,
+                                                            duration: 0,
                                                             opacity: 1,
                                                             height: "100%",
                                                           });
@@ -142,6 +144,7 @@ const Hamburger = ({ state }) => {
 */
 
   // staggerReveal function animation  ****
+  // COPY AND PASTE this function one more time for the next animations
   const staggerReveal = (node1, node2) => {
     gsap.from([node1, node2], {
       duration: 0.8,
@@ -151,6 +154,38 @@ const Hamburger = ({ state }) => {
       ease: "power3.inOut",
       stagger: {
         amount: 0.1,
+      },
+    });
+  };
+  //
+  // 2 function
+  //  fadeInUp(info); //this anim concerns the <p> text , and it will fade in and out from the Y axe,
+  // check line 79, there you must to add the name of this function so that the set up run.
+
+  const fadeInUp = (node) => {
+    gsap.from(node, {
+      y: 60,
+      duration: 1,
+      delay: 0.2,
+      opacity: 0,
+      ease: "power3.inOut",
+    });
+  };
+
+  //
+  // 3 function, in this one you will pass 3 parameters
+  // THE REASON why there s 3, it s because we have 3 lines (check line 12, 13,14)
+  // the 3 lines correspond to: OPPORTUNITIES, SOLUTIONS, CONTACT
+  // So these 3 nodes/lines are going to represent the 3 Links in line:221
+
+  const staggerText = (node1, node2, node3) => {
+    gsap.from([node1, node2, node3], {
+      duration: 0.8,
+      y: 100,
+      delay: 0.2,
+      ease: "power3.inOut",
+      stagger: {
+        amount: 0.5,
       },
     });
   };
