@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Header />
         <div className="container">
@@ -25,6 +25,7 @@ function App() {
   );
 }
 
+// ------
 function Opportunities() {
   return <p>Discover our numerous opportunities</p>;
 }
